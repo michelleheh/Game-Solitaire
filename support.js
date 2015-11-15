@@ -3,14 +3,20 @@ $(document).ready(function(){
   newGame();
   resetWaste();
   layOutTableau(game.tableau);
+  doubleClick();
   //set draggable options for faceUp cards
   $(".card.faceUp").draggable(pileDrag);
   //set droppable options for faceUp cards
   $(".card.faceUp").droppable(pileDrop);
 
   //--------------------------------Play Control--------------------------------
+  //road to start a new game
+  $("button").on("click", function () {
+    window.location.reload(false); 
+  });
+
   //flip card in waste pile
- $("div.top.waste.fd").on("click",function(){//when last card in the waste faceDown pile is clicked
+  $("div.top.waste.fd").on("click",function(){//when last card in the waste faceDown pile is clicked
     if ($(this).children().length > 0) {//if there is still cards left in the waste faceDown pile
       var $lastCard = $(this).children().last();
       
@@ -66,6 +72,7 @@ $(document).ready(function(){
       
         return condition1 && condition2 && condition3;
       },
+      hoverClass: "lightup",
       drop: function (event, ui) {
         if (ui.draggable.parent().is(".waste")) {
           var temp = ui.draggable.attr("tracker");
@@ -76,8 +83,7 @@ $(document).ready(function(){
         
         ui.draggable.offset($parentPosition);
 
-        youWin();
-
+        youWin(0);
       }
     });
   });
@@ -101,31 +107,9 @@ $(document).ready(function(){
         $(this).append(ui.draggable);
         ui.draggable.offset($(this).offset());
 
-        youWin();
+        youWin(0);
       }
     });
-  });
-
-//double click to send card to foundnation
-  $(".card").dblclick(function() {
-    if ( !$(this).children().is("div") && $(this).is(".faceUp")) {
-      debugger;
-      var cardSuite = $(this).find("p.suite").text(),
-          cardValue = $(this).find("p.value").text(),
-          foundationCount = $(".foundation." + cardSuite).children().length,
-          zCount = $("div.card.faceUp").length + 1;
-      
-      if ( foundationCount + 1 == cardValue ) {
-        if ($(this).parent().is(".waste")) {
-          var cardTracker = $(this).attr("tracker");
-          removeByTracker(game.waste,cardTracker);
-        };
-
-        $(".foundation." + cardSuite).append($(this));
-        $(this).offset($(".foundation." + cardSuite).offset());
-        $(this).css("z-index", zCount);
-      };
-    };
   });
 
 //_______________________end of $(document).ready()_______________________
@@ -197,28 +181,7 @@ function resetWaste(){
   each(game.waste,function(i, x){
     $(".top.waste.fd").append(lay(x));
       // double click to send card to foundation
-    $(".card").dblclick(function() {
-      if ( !$(this).children().is("div") && $(this).is(".faceUp")) {
-        debugger;
-        var cardSuite = $(this).find("p.suite").text();
-        var cardValue = $(this).find("p.value").text();
-        var foundationCount = $(".foundation." + cardSuite).children().length;
-        
-        if ( foundationCount + 1 == cardValue ) {
-          if ($(this).parent().is(".waste")) {
-            var cardTracker = $(this).attr("tracker");
-            removeByTracker(game.waste,cardTracker);
-          };
-        
-          $(".foundation." + cardSuite).append($(this));
-          $(this).offset($(".foundation." + cardSuite).offset());
-        
-          var zCount = $("div.card.faceUp").length + 1;
-        
-          $(this).css("z-index", zCount);
-        };
-      };
-    });
+    doubleClick();
   });
 };
 
@@ -266,6 +229,31 @@ function layOutTableau(tableau){
   });
 };
 
+
+//double click to send card to foundnation
+function doubleClick () {
+  $(".card").dblclick(function() {
+    if ( !$(this).children().is("div") && $(this).is(".faceUp")) {
+      var cardSuite = $(this).find("p.suite").text(),
+          cardValue = $(this).find("p.value").text(),
+          foundationCount = $(".foundation." + cardSuite).children().length,
+          zCount = $("div.card.faceUp").length + 1;
+      
+      if ( foundationCount + 1 == cardValue ) {
+        if ($(this).parent().is(".waste")) {
+          var cardTracker = $(this).attr("tracker");
+          removeByTracker(game.waste,cardTracker);
+        };
+
+        $(".foundation." + cardSuite).append($(this));
+        $(this).offset($(".foundation." + cardSuite).offset());
+        $(this).css("z-index", zCount);
+        youWin();
+      };
+    };
+  });
+};
+
 //helper function that defines the event following a drop action at the piles
 // used with droppable()
 var pileDrop = {
@@ -275,6 +263,7 @@ var pileDrop = {
     
     return condition1 && condition2;
   },
+  hoverClass: "lightup",
   drop: function (event, ui) {
     if (ui.draggable.parent().is(".waste")) {
       var cardTracker = ui.draggable.attr("tracker");
@@ -290,7 +279,7 @@ var pileDrop = {
     $(this).append(ui.draggable);
     ui.draggable.offset({top:$(this).offset().top + game.vertOff, left:$(this).offset().left});
 
-    youWin();
+    youWin(0);
   }
 };
 
@@ -303,39 +292,56 @@ var pileDrag = {
   stack: ".card.faceUp",
 };
 
-//automatically take the last card in the pile to the foundation
-function upload () {
+//automatically take cards up to the foundation - recursive function
+function upload (i) {
+  function reload () { //recursive funtion
+    if ( i === 6 ) {
+      i = 0;
+    } else {
+      i += 1;
+    }
+    return upload(i);
+  };
+
   if ( $(".pile div").length === 7 ) { 
-    return alert("You Won!");
+    fireworks();
   } else {
-    each(game.tableauBoard, function (index, colNum) {
-      if ($(".pile." + colNum + " div").length > 1) {
-        var $current = $(".pile." + colNum + " div:last"),
-            cardSuite = $current.find("p.suite").text(),
-            cardValue = $current.find("p.value").text(),
-            foundationCount = $(".foundation." + cardSuite).children().length;
-        
-        if ( foundationCount + 1 == cardValue ) {
-          var xDist = $(".foundation." + cardSuite).offset().left - $current.parent().offset().left,
-              yDist = $(".foundation." + cardSuite).offset().top - $current.parent().offset().top;
-        
+    var colNum = game.tableauBoard[i];
+    if ($(".pile." + colNum + " div").length > 1) {
+      var $current = $(".pile." + colNum + " div:last"),
+          cardSuite = $current.find("p.suite").text(),
+          cardValue = $current.find("p.value").text(),
+          foundationCount = $(".foundation." + cardSuite).children().length;
+      
+      if ( foundationCount + 1 == cardValue ) {
+        var xDist = $(".foundation." + cardSuite).offset().left - $current.parent().offset().left,
+            yDist = $(".foundation." + cardSuite).offset().top - $current.parent().offset().top;
+      
+        $current.animate({
+          top: yDist,
+          left: xDist
+        }, 100, function() {
+        // Animation complete.
           $(".foundation." + cardSuite).append($current);
           $(".foundation." + cardSuite).children().last().offset($(".foundation." + cardSuite).offset());
           
           var zCount = $("div.card.faceUp").length + 1;
           
           $(this).css("z-index", zCount);
-
-          return upload();
-        };
+          reload();
+        });
+      } else {
+        reload()
       };
-    });
+    } else {
+      reload();
+    }    
   };
 };
 
-function youWin () {
-  if ($(".card.faceDown").length + game.waste.length == 0 ) {
-    upload()
+function youWin (i) {
+  if ($(".card.faceDown").length + game.waste.length === 0 ) {
+    upload(i);
   };
 };
 //--------------------------------Game Setup--------------------------------

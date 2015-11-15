@@ -25,6 +25,12 @@ div.foundation.spade{left: 380px;}
 div.foundation.diamond{left: 470px;}
 div.foundation.club{left: 560px;}
 
+button {
+  position: absolute;
+  top: 20px; 
+  left: 210px;
+}
+
 div.pile {
   position: absolute;
   top: 200px;
@@ -63,4 +69,8 @@ p.diamond {color: red;}
 
 div.card.faceUp {
     cursor: pointer;
+}
+
+div.lightup {
+  box-shadow: 0px 0px 20px red;
 }
