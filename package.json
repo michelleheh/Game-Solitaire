@@ -3,7 +3,18 @@
   "description": "Xiaoyu's Hack Reactor Entrance Project",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.3.3",
+    "express": "4.13.3",
+  },
   "engines": {
     "node": "4.2.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fishfishher/Game-Solitaire.git"
+  },
 }
