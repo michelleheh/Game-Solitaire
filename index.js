@@ -8,3 +8,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/solitaire', function(request, response) {
   response.sendfile('main.html');
 });
+
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
