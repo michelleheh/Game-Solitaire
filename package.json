@@ -2,6 +2,7 @@
   "name": "solitaire",
   "description": "Xiaoyu's Hack Reactor Entrance Project",
   "version": "1.0.0",
+  "main": "index.js",
   "engines": {
     "node": "4.2.2"
   }
