@@ -13,8 +13,8 @@ I used the following onlne solitaire as an example for user interaction and game
 http://www.solitaire-cardgame.com/
 
 ##Libraries Used
-http://jqueryui.com/
-http://jquery.com/
+http://jqueryui.com/ is utilized for the drag and drop user actions and effects.
+http://jquery.com/ is used for DOM manipulation.
 
 ##Special Thanks to
 http://jsfiddle.net/dtrooper/AceJJ/
