@@ -20,18 +20,15 @@ http://www.solitaire-cardgame.com/
 
 ##Main Application Files
 
-main.html
-
-styling.css
-
-support.js
+* main.html
+* styling.css
+* support.js
 
 
 ##Libraries Used
 
-http://jquery.com/ is used for DOM manipulation and dynamic styling.
-
-http://jqueryui.com/ is utilized for the drag and drop user actions and effects.
+* http://jquery.com/ is used for DOM manipulation and dynamic styling.
+* http://jqueryui.com/ is utilized for the drag and drop user actions and effects.
 
 ##Special Thanks to
 
@@ -39,7 +36,7 @@ http://jsfiddle.net/dtrooper/AceJJ/
 for the javascript code that creats the fireworks effect.
 
 ##Further to Do
-link in legit card faces
-add a timer and counter for number of moves
+* link in legit card faces
+* add a timer and counter for number of moves
 
 
