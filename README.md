@@ -10,6 +10,7 @@ See more infomation and rules visit https://en.wikipedia.org/wiki/Klondike_(soli
 
 ##Example Game Followed
 I used the following onlne solitaire as an example for user interaction and game responses.
+
 http://www.solitaire-cardgame.com/
 
 ##Libraries Used
