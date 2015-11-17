@@ -38,7 +38,3 @@ for the javascript code that creats the fireworks effect.
 ##Further to Do
 * link in legit card faces
 * add a timer and counter for number of moves
-
-test test
-
-
