@@ -246,7 +246,7 @@ function doubleClick () {
         $(this).offset($(".foundation." + cardSuit).offset());
         $(this).css("z-index", zCount);
         //test whether the user has won
-        youWin();
+        youWin(0);
       };
     };
   });
