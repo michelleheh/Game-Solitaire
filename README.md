@@ -17,6 +17,16 @@ See more infomation and rules visit https://en.wikipedia.org/wiki/Klondike_(soli
 I used the following onlne solitaire as an example to follow for user interaction and game responses.
 http://www.solitaire-cardgame.com/
 
+
+##Main Application Files
+
+main.html
+
+styling.css
+
+support.js
+
+
 ##Libraries Used
 
 http://jquery.com/ is used for DOM manipulation and dynamic styling.
