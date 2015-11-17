@@ -6,9 +6,9 @@ This is a fully functional game of Klondike (Solitaire). The app is deployed at:
 http://xh-solitaire.herokuapp.com/
 
 Alternatively, you can play the game locally by forking the repository, and run main.html in the public folder.
-
+```
 In this version of the game, one card can be turned at a time in the top left waste pile.  There is no limit on times you can pass through the waste pile. The objective is to organize all 52 cards by suit, and in a accending order into the foundations on the top right corner.
-
+```
 Hint! Hint! Amazing things will happen when you win the game. o^__^o
 
 See more infomation and rules visit https://en.wikipedia.org/wiki/Klondike_(solitaire)
