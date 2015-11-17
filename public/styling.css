@@ -8,7 +8,7 @@
   height: 800px;
 }
 
-div.top {
+.top {
   position: absolute;
   top: 20px;
   border: 1px solid;
@@ -17,13 +17,13 @@ div.top {
   height: 120px;
 }
 
-div.waste.fd{left: 20px; cursor: pointer;}
-div.waste.fu{left: 120px;}
+.waste.fd{left: 20px; cursor: pointer;}
+.waste.fu{left: 120px;}
 
-div.foundation.heart{left: 290px;}
-div.foundation.spade{left: 380px;}
-div.foundation.diamond{left: 470px;}
-div.foundation.club{left: 560px;}
+.foundation.heart{left: 290px;}
+.foundation.spade{left: 380px;}
+.foundation.diamond{left: 470px;}
+.foundation.club{left: 560px;}
 
 button {
   position: absolute;
@@ -31,7 +31,7 @@ button {
   left: 210px;
 }
 
-div.pile {
+.pile {
   position: absolute;
   top: 200px;
   border: 1px solid;
@@ -40,17 +40,17 @@ div.pile {
   height: 120px;
 }
 
-div.col1{left: 20px;}
-div.col2{left: 110px;}
-div.col3{left: 200px;}
-div.col4{left: 290px;}
-div.col5{left: 380px;}
-div.col6{left: 470px;}
-div.col7{left: 560px;}
+.col1{left: 20px;}
+.col2{left: 110px;}
+.col3{left: 200px;}
+.col4{left: 290px;}
+.col5{left: 380px;}
+.col6{left: 470px;}
+.col7{left: 560px;}
 
 /*styling the cards*/
 
-div.card{
+.card{
   position: absolute;
   left: 0px;
   top: 0px;
@@ -60,17 +60,17 @@ div.card{
   border-radius: 5px;
 }
 
-div.card.faceDown {background-color: orange;}
-div.card.faceUp {background-color: white;}
+.card.faceDown {background-color: orange;}
+.card.faceUp {background-color: white;}
 
 p {display: inline;}
 p.heart {color: red;}
 p.diamond {color: red;}
 
-div.card.faceUp {
+.card.faceUp {
     cursor: pointer;
 }
 
-div.lightup {
+.lightup {
   box-shadow: 0px 0px 20px red;
 }
