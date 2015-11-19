@@ -32,9 +32,14 @@ http://www.solitaire-cardgame.com/
 
 ##Special Thanks to
 
-http://jsfiddle.net/dtrooper/AceJJ/
+* http://jsfiddle.net/dtrooper/AceJJ/
 for the javascript code that creats the fireworks effect.
+* https://code.google.com/p/vectorized-playing-cards/
+for sharing vectorized playing card
 
 ##Further to Do
-* link in legit card faces
 * add a timer and counter for number of moves
+* debug drag but not dropped case card shift by 1px
+
+##Latest Updates
+*11/18/1015 card faces rendered
