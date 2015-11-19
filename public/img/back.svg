@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="80px" height="120px" viewBox="0 0 80 120" enable-background="new 0 0 80 120" xml:space="preserve">
+<pattern  x="-257.5" y="480.5" width="2592" height="1728" patternUnits="userSpaceOnUse" id="rect18957_1_" viewBox="0 -1728 2592 1728" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 2592,0 2592,-1728 0,-1728 		"/>
+		<g>
+			<polygon fill="none" points="0,-1728 2592,-1728 2592,0 0,0 			"/>
+			<g>
+				<polygon fill="none" points="0,0 2592,0 2592,-1728 0,-1728 				"/>
+				<g>
+					<polygon fill="none" points="0,-1728 2592,-1728 2592,0 0,0 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</pattern>
+<pattern  x="-257.5" y="480.5" width="2592" height="1728" patternUnits="userSpaceOnUse" id="rect18963_1_" viewBox="0 -1728 2592 1728" overflow="visible">
+	<g>
+		<polygon fill="none" points="0,0 2592,0 2592,-1728 0,-1728 		"/>
+		<g>
+			<polygon fill="none" points="0,-1728 2592,-1728 2592,0 0,0 			"/>
+			<g>
+				<polygon fill="none" points="0,0 2592,0 2592,-1728 0,-1728 				"/>
+				<g>
+					<polygon fill="none" points="0,-1728 2592,-1728 2592,0 0,0 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</pattern>
+<path id="rect18953" fill="#FFFFFF" stroke="#010202" d="M3.881,0H76.12c2.11,0,3.821,1.837,3.821,4.104v111.791
+	c0,2.269-1.711,4.104-3.821,4.104H3.881c-2.111,0-3.822-1.839-3.822-4.104V4.104C0.059,1.837,1.77,0,3.881,0z"/>
+<rect id="rect18955" x="4.584" y="4.664" fill="none" stroke="#D41116" stroke-width="4.9524" stroke-linecap="round" width="70.834" height="110.67"/>
+<pattern  id="rect18957_2_" xlink:href="#rect18957_1_" patternTransform="matrix(6.7529 0 0 6.7529 176906.5938 273648.3438)">
+</pattern>
+<rect id="rect18957" x="6.161" y="6.158" fill="url(#rect18957_2_)" stroke="#D41116" stroke-linecap="round" width="67.679" height="107.682"/>
+<path id="rect18959" fill="#FFFFFF" stroke="#010202" d="M3.881,0H76.12c2.11,0,3.821,1.837,3.821,4.104v111.791
+	c0,2.269-1.711,4.104-3.821,4.104H3.881c-2.111,0-3.822-1.839-3.822-4.104V4.104C0.059,1.837,1.77,0,3.881,0z"/>
+<rect id="rect18961" x="4.584" y="4.664" fill="#D41116" stroke="#D41116" stroke-width="4.9524" stroke-linecap="round" width="70.834" height="110.67"/>
+<pattern  id="rect18963_2_" xlink:href="#rect18963_1_" patternTransform="matrix(5.7428 0 0 5.7428 146471.4062 232147.1094)">
+</pattern>
+<rect id="rect18963" x="6.161" y="6.158" fill="url(#rect18963_2_)" stroke="#FFFFFF" stroke-linecap="round" width="67.679" height="107.682"/>
+</svg>

@@ -30,6 +30,7 @@ $(document).ready(function(){
           $cardSuit = $("<p/>", {"class": cardSuit +" suit", "text": cardSuit});
       
       $lastCard.append($cardVal).append($cardSuit);
+      $lastCard.css("background-image", "url('img/"+ cardSuit + cardVal +".svg')");
       $(".top.waste.fu").append($lastCard);
       $(".waste.fu div:last").draggable(pileDrag);
       
@@ -57,6 +58,7 @@ $(document).ready(function(){
             $cardSuit = $("<p/>", {"class": cardSuit +" suit", "text": cardSuit});
         
         $(this).append($cardVal).append($cardSuit);
+        $(this).css("background-image", "url('img/"+ cardSuit + cardVal +".svg')");
       }
     });
   });
@@ -168,6 +170,7 @@ function flip(card){
       $cardVal = $("<p/>", {"class": card.suit + " value", "text": card.value}),
       $cardSuit = $("<p/>", {"class": card.suit +" suit", "text": card.suit});
   $cardDiv.append($cardVal).append($cardSuit);
+  $cardDiv.css("background-image", "url('img/"+ card.suit + card.value +".svg')");
   return $cardDiv;
 };
 

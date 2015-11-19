@@ -20,10 +20,22 @@
 .waste.fd{left: 20px; cursor: pointer;}
 .waste.fu{left: 120px;}
 
-.foundation.heart{left: 290px;}
-.foundation.spade{left: 380px;}
-.foundation.diamond{left: 470px;}
-.foundation.club{left: 560px;}
+.foundation.heart{
+  left: 290px;
+  background-image: url('img/heartFoundation.svg');
+}
+.foundation.spade{
+  left: 380px;
+  background-image: url('img/spadeFoundation.svg');
+}
+.foundation.diamond{
+  left: 470px;
+  background-image: url('img/diamondFoundation.svg');
+}
+.foundation.club{
+  left: 560px;
+  background-image: url('img/clubFoundation.svg');
+}
 
 button {
   position: absolute;
@@ -54,18 +66,15 @@ button {
   position: absolute;
   left: 0px;
   top: 0px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   width: 80px;
   height: 120px;
   border-radius: 5px;
 }
 
-.card.faceDown {background-color: orange;}
-.card.faceUp {background-color: white;}
+.card.faceDown {background-image: url('img/back.svg');}
 
-p {display: inline;}
-p.heart {color: red;}
-p.diamond {color: red;}
+p {visibility: hidden;}
 
 .card.faceUp {
     cursor: pointer;
