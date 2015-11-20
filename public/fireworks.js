@@ -1,6 +1,6 @@
 function fireworks () {
 	var SCREEN_WIDTH = 660,//window.innerWidth,
-	    SCREEN_HEIGHT = 800,//window.innerHeight,
+	    SCREEN_HEIGHT = 700,//window.innerHeight,
 	    mousePos = {
 	        x: 400,
 	        y: 300

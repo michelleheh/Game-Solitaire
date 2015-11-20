@@ -42,4 +42,6 @@ for sharing vectorized playing card
 * debug drag but not dropped case card shift by 1px
 
 ##Latest Updates
-*11/18/1015 card faces rendered
+* 11/20/2015 waste pile count added
+* 11/18/1015 card faces rendered
+

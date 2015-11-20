@@ -36,6 +36,7 @@ $(document).ready(function(){
       
       var zCount = $("div.card.faceUp").length + 1; //number of cards that are facing up + 1
       $(".top.waste.fu div:last").css("z-index", zCount); // put the last card in the waste face up pile on top
+      updateCount();
 
     } else {
       resetWaste();
@@ -174,13 +175,16 @@ function flip(card){
   return $cardDiv;
 };
 
+function updateCount () {
+  $(".count").text("Card Left: " + $(".waste div.faceDown").length);
+};
 
 function resetWaste(){
   $(".top.waste.fu").empty();
   game.each(game.waste,function(i, x){
     $(".top.waste.fd").append(lay(x));
-      // double click to send card to foundation
-    doubleClick();
+    updateCount();
+    doubleClick();// double click to send card to foundation
   });
 };
 
@@ -279,7 +283,6 @@ var pileDrop = {
 
     $(this).append(ui.draggable);
     ui.draggable.offset({top:$(this).offset().top + game.vertOff, left:$(this).offset().left});
-
     youWin(0);
   }
 };
