@@ -28,7 +28,6 @@ div {
   position: absolute;
   top: 150px;
   left: 20px;
-  color: white;
 }
 
 .foundation.heart{
@@ -102,5 +101,4 @@ footer {
   font-size: 12px;
   font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
   display: inline-block; 
-  color: white;
 }
